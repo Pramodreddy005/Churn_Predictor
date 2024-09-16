@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Form</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Form</h1>
+        <form id="customer-form" method="post" action="/calculate">
+             <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="100" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="geography">Geography:</label>
+                <select id="geography" name="geography">
+                    <option value="Germany">Germany</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Spain">France</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="tenure">Tenure:</label>
+                <input type="number" id="tenure" name="tenure" min="0" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="numOfProducts">Number of Products:</label>
+                <input type="number" id="numOfProducts" name="numOfProducts" min="1" max="15" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="hasCrCard">Has Credit Card:</label>
+                <select id="hasCrCard" name="hasCrCard">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="isActiveMember">Is Active Member:</label>
+                <select id="isActiveMember" name="isActiveMember">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="creditScore">Credit Score:</label>
+                <input type="number" id="creditScore" name="creditScore" min="300" max="850" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="estimatedSalary">Estimated Salary:</label>
+                <input type="number" id="estimatedSalary" name="estimatedSalary" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="balance">Balance:</label>
+                <input type="number" id="balance" name="balance" required>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" class="btn-submit">Submit</button>
+            </div>
+        </form>
+        <div id="outputContainer">
+            <h3>Customer Left: </h3>
+            <p id="output" style="font-size: 18px; font-weight: bold; text-align: center; color: #333;">{{ output | default('') }}</p>
+        </div>
+    </div>
+</body>
+</html>
