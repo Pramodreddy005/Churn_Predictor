@@ -18,28 +18,28 @@
             <div class="form-group">
                 <label for="geography">Geography:</label>
                 <select id="geography" name="geography">
+                    <option value="France">France</option>
                     <option value="Germany">Germany</option>
                     <option value="Spain">Spain</option>
-                    <option value="Spain">France</option>
                 </select>
             </div>
             
             <div class="form-group">
                 <label for="gender">Gender:</label>
                 <select id="gender" name="gender">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
                 </select>
             </div>
             
             <div class="form-group">
                 <label for="tenure">Tenure:</label>
-                <input type="number" id="tenure" name="tenure" min="0" required>
+                <input type="number" id="tenure" name="tenure" min="0" max="100" required>
             </div>
             
             <div class="form-group">
                 <label for="numOfProducts">Number of Products:</label>
-                <input type="number" id="numOfProducts" name="numOfProducts" min="1" max="15" required>
+                <input type="number" id="numOfProducts" name="numOfProducts" min="1" max="14" required>
             </div>
             
             <div class="form-group">
@@ -65,12 +65,12 @@
             
             <div class="form-group">
                 <label for="estimatedSalary">Estimated Salary:</label>
-                <input type="number" id="estimatedSalary" name="estimatedSalary" required>
+                <input type="number" id="estimatedSalary" name="estimatedSalary" min="0" required>
             </div>
             
             <div class="form-group">
                 <label for="balance">Balance:</label>
-                <input type="number" id="balance" name="balance" required>
+                <input type="number" id="balance" name="balance"min="0" required>
             </div>
             
             <div class="form-group">
